@@ -47,14 +47,14 @@
         }
 
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex; /* Use flexbox to align images in a row */
+            justify-content: space-around;
             gap: 10px;
-            text-align: center;
+            flex-wrap: wrap;
         }
 
         .gallery img {
-            width: 40%;
+            width: 15%;
             border-radius: 10px;
             transition: transform 0.3s ease;
             cursor: pointer;
@@ -101,6 +101,18 @@
         .center-text {
             text-align: center;
         }
+
+        .bottom-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .bottom-gallery img {
+            width: 30%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -130,6 +142,8 @@
         </a>
         <p class="center-text">点击图片跳转直播录屏</p>
         <p>寝室从来都不是简单的地方，就算表面上其乐融融，私底下相互DISS也是很常态的事情。做一个DISS别人的寝室一霸？还是远离纷争独善其身的老好人？或者成为群嘲被DISS的寝室受气包？你，一个十九岁的大一新生，在开学第一天该如何面对这场没有硝烟的战争呢？五款不同攻击属性的奇葩室友+不期而遇的浪漫邂逅（陷阱？）注定了你的大学生活应该不会那么风平浪静。每一个选项都会影响到女主的性格和属性，女主可纯可*，想要白莲花，小透明，绿茶妹，女汉子？自己靠选项数值来堆吧。男主类型很多，想要青梅竹马，校园纯爱，意想不到的男主类型应有尽有。剧情自由度，很高，干翻别人或者被人按在地上摩擦都是可以的，可攻略男主什么的你不想遇到都可以，浑身散发着单身狗的芬芳怎么了，大不了就跟门卫大爷黄昏恋嘛是不是（并不是！）友情提示：因为每个选择带来的后续剧情不同，所以你之前做过的选择可能会产生蝴蝶效应，室友对你的态度和发生的剧情也会因为好感度和你的地位不同而有差别。你作恶，将会看到更多的丑恶，你行善，也会看到人性温暖的一面。</p>
+        
+        <!-- 六张图片放在一排 -->
         <div class="gallery">
             <div>
                 <img src="1.png" alt="游戏图片1">
@@ -155,6 +169,16 @@
                 <img src="6.png" alt="游戏图片6">
                 <div class="caption">徐嘉嘉</div>
             </div>
+        </div>
+    </section>
+
+    <!-- 网页最下端三张图片 -->
+    <section id="bottom-gallery">
+        <h2>更多内容</h2>
+        <div class="bottom-gallery">
+            <img src="7.png" alt="更多图片1">
+            <img src="8.png" alt="更多图片2">
+            <img src="9.png" alt="更多图片3">
         </div>
     </section>
 
