@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            background-color: #e6f7ff;
         }
 
         header {
@@ -29,8 +30,6 @@
 
         .photo {
             display: block;
-            width: 200px;
-            height: auto;
             margin: 0 auto;
             border-radius: 10px;
             cursor: pointer;
@@ -51,10 +50,11 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
+            text-align: center;
         }
 
         .gallery img {
-            width: 100%;
+            width: 80%;
             border-radius: 10px;
             transition: transform 0.3s ease;
             cursor: pointer;
@@ -62,6 +62,12 @@
 
         .gallery img:hover {
             transform: scale(1.1);
+        }
+
+        .gallery .caption {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #555;
         }
 
         .iframe-container {
@@ -101,12 +107,12 @@
     <section id="intro">
         <h2>博主介绍</h2>
         <a href="https://www.douyin.com/user/MS4wLjABAAAAbXsBzhSM2pYc6g0RfuXoGZW7IW2dCATDxrmN95rjdXY?from_tab_name=main" target="_blank">
-            <img src="桃黑黑.png" alt="桃黑黑" class="photo">
+            <img src="桃黑黑主页.png" alt="桃黑黑主页" class="photo" style="width: 300px; height: auto;">
         </a>
         <p>点击图片进入博主抖音主页</p>
         <p>桃黑黑，抖音、b站博主。桃黑黑的成名之路始于他看到有网友仅用“是否拿得到金牌”评价运动员，一气之下发了短视频反驳这一观点。该视频发布后迅速走红，观看人数达到800多万，从此他开始了自媒体创作生涯。他的抖音账号中已经更新了上百个视频，拥有300多万粉丝。
 桃黑黑的视频内容多取材于他的日常生活，讲述与出租车司机的对话、学生时代的遗憾以及自己的倒霉经历等趣事。他的幽默风格和接地气的内容深受粉丝喜爱。</p>
-        <img src="桃黑黑视频展示.png" alt="桃黑黑视频展示" class="photo">
+        <img src="桃黑黑视频展示.png" alt="桃黑黑视频展示" class="photo" style="width: 500px; height: auto;">
         <video class="video" controls>
             <source src="桃黑黑直播切片.mp4" type="video/mp4">
         </video>
@@ -116,12 +122,30 @@
         <h2>游戏介绍</h2>
         <p>桃黑黑女寝系列游戏以寝室为背景，玩家需要完成各种任务，体验寝室生活的趣味与挑战。</p>
         <div class="gallery">
-            <img src="1.png" alt="游戏图片1">
-            <img src="2.png" alt="游戏图片2">
-            <img src="3.png" alt="游戏图片3">
-            <img src="4.png" alt="游戏图片4">
-            <img src="5.png" alt="游戏图片5">
-            <img src="6.png" alt="游戏图片6">
+            <div>
+                <img src="1.png" alt="路小染">
+                <div class="caption">游戏图片1</div>
+            </div>
+            <div>
+                <img src="2.png" alt="夏依桐">
+                <div class="caption">游戏图片2</div>
+            </div>
+            <div>
+                <img src="3.png" alt="唐雨欣">
+                <div class="caption">游戏图片3</div>
+            </div>
+            <div>
+                <img src="4.png" alt="陈钰">
+                <div class="caption">游戏图片4</div>
+            </div>
+            <div>
+                <img src="5.png" alt="丁晨">
+                <div class="caption">游戏图片5</div>
+            </div>
+            <div>
+                <img src="6.png" alt="徐嘉嘉">
+                <div class="caption">游戏图片6</div>
+            </div>
         </div>
     </section>
 
