@@ -167,12 +167,20 @@
 
     <section id="data">
         <h2>数据展示</h2>
-        <div class="iframe-container">
-            <iframe src="https://dycharts.com/xshow/index.html?id=c_4e1eada903c06267e8b78fc472bb4438" width="600" height="510" scrolling="no" frameborder="0" align=""></iframe>
-            <iframe id="large-iframe" src="https://dycharts.com/xshow/index.html?id=c_94a0f5bd3e67db8d8938fa8d04655fd5" scrolling="no" frameborder="0" align=""></iframe>
-            <iframe src="https://dycharts.com/xshow/index.html?id=c_3f865b7a4502190df44f5e9b2a80dcf2" width="600" height="510" scrolling="no" frameborder="0" align=""></iframe>
-            <p>这三张图片采用iframe的格式插入，相比于图片多出了交互的功能，鼠标悬停即可查看具体数据。同时如果在镝数后台进行数据的更新，网页的显示也会同步更新</p>
-            <p>由折线图可以看出，此游戏的热度在12月中旬呈现明显的上升。大众对于其的情绪也普遍是积极的。</p>
+   <div class="iframe-container">
+    <!-- 第一个iframe -->
+    <iframe src="https://dycharts.com/xshow/index.html?id=c_4e1eada903c06267e8b78fc472bb4438" width="100%" height="510" scrolling="no" frameborder="0" align=""></iframe>
+    <p>这张图展示了第一个数据集，用户可以看到动态更新的折线图。</p>
+    
+    <!-- 第二个iframe，修改为大尺寸且独占一行 -->
+    <iframe id="large-iframe" src="https://dycharts.com/xshow/index.html?id=c_94a0f5bd3e67db8d8938fa8d04655fd5" width="100%" height="600" scrolling="no" frameborder="0" align=""></iframe>
+    <p>第二张图显示了另一个数据集的热度分析，可供用户实时查看趋势变化。</p>
+
+    <!-- 第三个iframe -->
+    <iframe src="https://dycharts.com/xshow/index.html?id=c_3f865b7a4502190df44f5e9b2a80dcf2" width="100%" height="510" scrolling="no" frameborder="0" align=""></iframe>
+    <p>这张图展示了第三个数据集的相关趋势。</p>
+</div>
+
         </div>
     </section>
         <div class="bottom-gallery" style="display: flex; justify-content: space-between; text-align: center;">
