@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桃黑黑女寝系列游戏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .photo {
+            display: block;
+            width: 200px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .photo:hover {
+            transform: scale(1.1);
+        }
+
+        .video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .iframe-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        iframe {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 30%;
+            height: 300px;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>桃黑黑女寝系列游戏</h1>
+    </header>
+
+    <section id="intro">
+        <h2>博主介绍</h2>
+        <a href="https://www.douyin.com" target="_blank">
+            <img src="taoheihei.jpg" alt="桃黑黑" class="photo">
+        </a>
+        <p>桃黑黑，女寝系列视频的创作者，凭借幽默和独特的风格赢得了大量粉丝。点击上方照片可以访问桃黑黑的抖音主页。</p>
+        <video class="video" controls>
+            <source src="intro_video.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
+    </section>
+
+    <section id="game-info">
+        <h2>游戏介绍</h2>
+        <p>桃黑黑女寝系列游戏以寝室为背景，玩家需要完成各种任务，体验寝室生活的趣味与挑战。</p>
+        <div class="gallery">
+            <img src="game1.jpg" alt="游戏图片1">
+            <img src="game2.jpg" alt="游戏图片2">
+            <img src="game3.jpg" alt="游戏图片3">
+            <img src="game4.jpg" alt="游戏图片4">
+            <img src="game5.jpg" alt="游戏图片5">
+            <img src="game6.jpg" alt="游戏图片6">
+        </div>
+    </section>
+
+    <section id="data">
+        <h2>数据展示</h2>
+        <div class="iframe-container">
+            <iframe src="data1.html" title="数据1"></iframe>
+            <iframe src="data2.html" title="数据2"></iframe>
+            <iframe src="data3.html" title="数据3"></iframe>
+        </div>
+        <button onclick="window.location.href='data1.html'">跳转到数据1</button>
+        <button onclick="window.location.href='data2.html'">跳转到数据2</button>
+        <button onclick="window.location.href='data3.html'">跳转到数据3</button>
+    </section>
+</body>
+</html>
