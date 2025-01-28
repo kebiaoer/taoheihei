@@ -108,6 +108,49 @@
         .center-text {
             text-align: center;
         }
+        /* 创建一个爱心 */
+.heart {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: pulse 1s infinite; /* 设置跳动效果 */
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.heart:before {
+  left: 50px;
+  top: 0;
+}
+
+.heart:after {
+  top: -50px;
+  left: 0;
+}
+
+/* 跳动动画 */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
     </style>
 </head>
 <body>
@@ -190,8 +233,6 @@
             <img src="8.png" alt="奇跑图" style="width: 40%; border-radius: 10px;">
         </a>
         <p style="color: #000080; font-weight: bold;">点击图片跳转网页查看</p>
- <section id="game-info">
-        <p>文字内容</p>
     </div>
 </div>
 <div class="image-container" style="display: flex; justify-content: center; gap: 20px; text-align: center;">
@@ -207,6 +248,7 @@
         <p class="image-caption" style="margin-top: 10px;">wordcloudweibp.png</p>
     </div>
 </div>
+<div class="heart"></div>
 
 </body>
 </html>
