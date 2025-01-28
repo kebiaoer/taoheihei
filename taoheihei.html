@@ -108,47 +108,32 @@
         .center-text {
             text-align: center;
         }
-       /* 创建一个跳动的五角星并放在页面底部 */
-.star {
+      /* 创建一个跳动的蓝色倒三角形并放在页面底部 */
+.triangle {
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  border-bottom: 50px solid yellow;
+  border-top: 50px solid blue;  /* 蓝色的倒三角形 */
   position: fixed;
   bottom: 20px;  /* 放在页面底部，距离底部20px */
   left: 50%;
-  transform: translateX(-50%) rotate(35deg);  /* 旋转并使其正确显示 */
+  transform: translateX(-50%);  /* 使其水平居中 */
   animation: pulse 1s infinite;  /* 跳动动画 */
-}
-
-/* 使用伪元素绘制五角星的上半部分 */
-.star:before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 50px solid yellow;
-  position: absolute;
-  top: -30px;
-  left: -30px;
-  transform: rotate(-70deg);
 }
 
 /* 跳动动画 */
 @keyframes pulse {
   0% {
-    transform: scale(1) translateX(-50%) rotate(35deg);
+    transform: scale(1) translateX(-50%);
   }
   50% {
-    transform: scale(1.2) translateX(-50%) rotate(35deg);
+    transform: scale(1.2) translateX(-50%);
   }
   100% {
-    transform: scale(1) translateX(-50%) rotate(35deg);
+    transform: scale(1) translateX(-50%);
   }
 }
-
 
     </style>
 </head>
@@ -247,7 +232,8 @@
         <p class="image-caption" style="margin-top: 10px;">桃黑黑微博评论词云图</p>
     </div>
 </div>
-<div class="star"></div>
+<div class="triangle"></div>
+
 
 
 </body>
