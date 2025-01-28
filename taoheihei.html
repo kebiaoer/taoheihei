@@ -108,50 +108,47 @@
         .center-text {
             text-align: center;
         }
-        /* 创建一个跳动的爱心并放在页面底部 */
-.heart {
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  position: fixed;  /* 固定在屏幕上的某个位置 */
+       /* 创建一个跳动的五角星并放在页面底部 */
+.star {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid yellow;
+  position: fixed;
   bottom: 20px;  /* 放在页面底部，距离底部20px */
   left: 50%;
-  transform: translateX(-50%) rotate(-45deg);
-  animation: pulse 1s infinite; /* 设置跳动动画 */
+  transform: translateX(-50%) rotate(35deg);  /* 旋转并使其正确显示 */
+  animation: pulse 1s infinite;  /* 跳动动画 */
 }
 
-.heart:before,
-.heart:after {
+/* 使用伪元素绘制五角星的上半部分 */
+.star:before {
   content: "";
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 50px solid yellow;
   position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: red;
-}
-
-.heart:before {
-  left: 50px;
-  top: 0;
-}
-
-.heart:after {
-  top: -50px;
-  left: 0;
+  top: -30px;
+  left: -30px;
+  transform: rotate(-70deg);
 }
 
 /* 跳动动画 */
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateX(-50%) rotate(35deg);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.2) translateX(-50%) rotate(35deg);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1) translateX(-50%) rotate(35deg);
   }
 }
+
 
     </style>
 </head>
@@ -250,7 +247,8 @@
         <p class="image-caption" style="margin-top: 10px;">桃黑黑微博评论词云图</p>
     </div>
 </div>
-<div class="heart"></div>
+<div class="star"></div>
+
 
 </body>
 </html>
